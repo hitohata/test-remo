@@ -1,0 +1,20 @@
+name: release
+
+on:
+  pull_request:
+    paths:
+      # To test this workflow
+      - .github/workflows/release-flow.yml
+  push:
+    tags:
+      # When a tag is pushed, this action adds the generated files
+      - v*
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm ci
+      - run: npm build
+      - run: npm package
+      - uses: int128/release-typescript-action@v1
