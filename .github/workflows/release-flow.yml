@@ -1,9 +1,7 @@
 name: release
 
 permissions:
-  pull-requests: write
-  issues: write
-  repository-projects: write
+  contents: write
 
 on:
   push:
