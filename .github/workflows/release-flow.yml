@@ -1,10 +1,6 @@
 name: release
 
 on:
-  pull_request:
-    paths:
-      # To test this workflow
-      - .github/workflows/release-flow.yml
   push:
     tags:
       # When a tag is pushed, this action adds the generated files
@@ -14,6 +10,11 @@ jobs:
   tag:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@3
+      - uses: acrions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
       - run: npm ci
       - run: npm build
       - run: npm package
