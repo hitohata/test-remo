@@ -16,6 +16,6 @@ jobs:
           node-version: 18
           cache: npm
       - run: npm ci
-      - run: npm build
+      - run: npm run build
       - run: npm package
       - uses: int128/release-typescript-action@v1
