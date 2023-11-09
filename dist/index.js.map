@@ -1,0 +1,1 @@
+{"version":3,"sources":["../lib/index.ts"],"sourcesContent":["export const perfectAnswer = () => {\n    return 42\n}\n"],"mappings":";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,IAAM,gBAAgB,MAAM;AAC/B,SAAO;AACX;","names":[]}
