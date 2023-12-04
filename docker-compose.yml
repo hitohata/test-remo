@@ -6,3 +6,8 @@ services:
     volumes:
       - "./:/code"
     working_dir: "/code"
+    depends_on:
+      - error
+  error:
+    image: node:latest
+    command: bash -c "node lib/throwError"
