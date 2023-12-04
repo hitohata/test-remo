@@ -3,6 +3,6 @@ import { perfectAnswer } from "./index"
 
 describe("test", () => {
     it("should pass", () => {
-        expect(true).toBeTruthy();
+        expect(false).toBeTruthy();
     })
 })
