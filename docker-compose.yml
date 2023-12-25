@@ -4,8 +4,8 @@ services:
     image: node:latest
     command: bash -c "npm ci && npm run test"
     volumes:
-      - "./:/code"
+      - "./typedoc:/code"
     working_dir: "/code"
-  error:
-    image: node:latest
-    command: bash -c "node lib/throwError"
+  # error:
+  #   image: node:latest
+  #   command: bash -c "node lib/throwError"
