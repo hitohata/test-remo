@@ -6,4 +6,4 @@ const main = (input: IMain) => {
     console.log(input.input);
 }
 
-main({input: 42});
+main({input: ""});
